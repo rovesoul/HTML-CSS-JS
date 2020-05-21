@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件监听</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+        
+        table,
+        table tr th,
+        table tr td {
+            border: 1px solid #000;
+        }
+        
+        table {
+            min-height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        
+        th {
+            width: 130px;
+        }
+    </style>
+    <script type="text/javascript" language=JavaScript>
+        function doNothing() {
+            window.event.returnValue = false;
+            return false;
+        }
+
+        window.onload = function() {
+            const button = document.getElementById('button');
+            const buttons = document.getElementById('buttons');
+            const clientX = document.getElementById('clientX');
+            const clientY = document.getElementById('clientY');
+            const ctrlKey = document.getElementById('ctrlKey');
+            const metaKey = document.getElementById('metaKey');
+            const shiftKey = document.getElementById('shiftKey');
+            const altKey = document.getElementById('altKey');
+            const which = document.getElementById('which');
+            const combineKey = document.getElementById('combineKey');
+
+
+            document.onmousedown = function(event) {
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+                e.preventDefault(); //阻止默认事件
+                // 设置获取的值
+                button.innerHTML = e.button;
+                buttons.innerHTML = e.buttons;
+                clientX.innerHTML = e.clientX;
+                clientY.innerHTML = e.clientY;
+                ctrlKey.innerHTML = e.ctrlKey;
+                metaKey.innerHTML = e.metaKey;
+                shiftKey.innerHTML = e.shiftKey;
+                altKey.innerHTML = e.altKey;
+                which.innerHTML = e.which;
+
+                function getButton(value) {
+                    let buttonname = '';
+                    if (value === 0) buttonname = '鼠标左键';
+                    if (value === 1) buttonname = '鼠标中间键';
+                    if (value === 2) buttonname = '鼠标右键';
+                    return buttonname;
+                }
+
+                if (e.altKey || e.shiftKey || e.metaKey || e.ctrlKey) {
+                    let result = '';
+                    if (e.altKey) {
+                        result = 'Alt';
+                    } else if (e.shiftKey) {
+                        result = 'Shift';
+                    } else if (e.metaKey) {
+                        result = 'Meta';
+                    } else if (e.ctrlKey) {
+                        result = 'Control';
+                    }
+                    combineKey.innerHTML = `${result} + ${getButton(e.button)}`;
+                } else {
+                    combineKey.innerHTML = getButton(e.button);
+                }
+            };
+        }
+    </script>
+</head>
+
+<body oncontextmenu="doNothing()">
+    <div id="container">
+        <table border="0px">
+            <tr>
+                <th>button</th>
+                <th>buttons</th>
+                <th>clientX</th>
+                <th>clientY</th>
+                <th>ctrlKey</th>
+                <th>metaKey</th>
+                <th>shiftKey</th>
+                <th>altKey</th>
+                <th>which</th>
+                <th>组合健</th>
+            </tr>
+            <tr>
+                <td id="button">-</td>
+                <td id="buttons">-</td>
+                <td id="clientX">-</td>
+                <td id="clientY">-</td>
+                <td id="ctrlKey">-</td>
+                <td id="metaKey">-</td>
+                <td id="shiftKey">-</td>
+                <td id="altKey">-</td>
+                <td id="which">-</td>
+                <td id="combineKey">-</td>
+            </tr>
+        </table>
+        <hr />
+    </div>
+</body>
+
+</html>

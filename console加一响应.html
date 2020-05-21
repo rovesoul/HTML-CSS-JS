@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var varible = 0;
+        var varible2 = 0;
+        var a = 0;
+
+        function drawVar(vari) {
+            document.getElementById("a").innerHTML = vari;
+        }
+
+        function add() {
+            varible++;
+
+            drawVar(varible);
+            b = 1;
+            c = a + 1;
+            a++;
+            console.log("点add按钮" + c + "次");
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div style="height:30px; width:30px;" id="a"></div>
+    <!--点击的时候调用增加函数-->
+    <button onclick="add();">add</button>
+
+    <script type="text/javascript">
+        //加载完后，先把未增加，也就是0，写到页面
+        drawVar(varible);
+    </script>
+
+</body>
+
+</html>

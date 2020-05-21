@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title></title>
+    <script>
+        function buttonHandler() {
+            alert('Hello')
+        }
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="buttonHandler">
+          按钮
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            methods: {
+                buttonHandler: buttonHandler
+            },
+        })
+    </script>
+</body>
+
+</html>

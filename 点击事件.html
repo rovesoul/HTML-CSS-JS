@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>键盘事件监听</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+        
+        table,
+        table tr th,
+        table tr td {
+            border: 1px solid #000;
+        }
+        
+        table {
+            min-height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+        
+        th {
+            width: 150px;
+        }
+    </style>
+    <script type="text/javascript" language=JavaScript>
+        window.onload = function() {
+            const key = document.getElementById('key');
+            const keyCode = document.getElementById('keyCode');
+
+            const code = document.getElementById('code');
+            const ctrlKey = document.getElementById('ctrlKey');
+            const metaKey = document.getElementById('metaKey');
+            const shiftKey = document.getElementById('shiftKey');
+            const altKey = document.getElementById('altKey');
+            const combineKey = document.getElementById('combineKey');
+
+
+            document.onkeydown = function(event) {
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+                e.preventDefault(); //阻止默认事件
+                // 设置获取的值
+                key.innerHTML = e.key;
+                keyCode.innerHTML = e.keyCode;
+                code.innerHTML = e.code;
+                ctrlKey.innerHTML = e.ctrlKey;
+                metaKey.innerHTML = e.metaKey;
+                shiftKey.innerHTML = e.shiftKey;
+                altKey.innerHTML = e.altKey;
+
+                if (e.altKey || e.shiftKey || e.metaKey || e.ctrlKey) {
+                    let result = '';
+                    if (e.altKey) {
+                        result = 'Alt';
+                    } else if (e.shiftKey) {
+                        result = 'Shift';
+                    } else if (e.metaKey) {
+                        result = 'Meta';
+                    } else if (e.ctrlKey) {
+                        result = 'Control';
+                    }
+                    combineKey.innerHTML = result !== e.key ? `${result} + ${e.key}` : `${result}`;
+                } else {
+                    combineKey.innerHTML = '-';
+                }
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <table border="0px">
+            <tr>
+                <th>key</th>
+                <th>keyCode</th>
+                <th>code</th>
+                <th>ctrlKey</th>
+                <th>metaKey</th>
+                <th>shiftKey</th>
+                <th>altKey</th>
+                <th>组合健</th>
+            </tr>
+            <tr>
+                <td id="key">-</td>
+                <td id="keyCode">-</td>
+                <td id="code">-</td>
+                <td id="ctrlKey">-</td>
+                <td id="metaKey">-</td>
+                <td id="shiftKey">-</td>
+                <td id="altKey">-</td>
+                <td id="combineKey">-</td>
+            </tr>
+        </table>
+        <hr />
+    </div>
+</body>
+
+</html>
