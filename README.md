@@ -10,3 +10,7 @@
 ## …or push an existing repository from the command line
 - git remote add origin https://github.com/rovesoul/HTML-CSS-JS.git
 - git push -u origin master
+
+
+## 新建分支
+- git push --set-upstream origin [macfile]
