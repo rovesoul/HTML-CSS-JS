@@ -1,3 +1,4 @@
+# 创建后的默认提示，so记录一下
 ## …or create a new repository on the command line
 - git init
 - git add README.md
