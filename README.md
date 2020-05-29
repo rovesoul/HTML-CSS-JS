@@ -14,3 +14,4 @@
 
 ## 新建分支
 - git push --set-upstream origin [macfile]
+- oh fu*ck 通过新建分支的方式，我把macfile文件全部删了。。。。。。找不回来了

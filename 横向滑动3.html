@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>标签切页面</title>
+    <style type="text/css">
+
+        body {
+            font-size: 12px;
+            background: #666;
+        }
+
+        #box {
+            width: 100%;
+            height: 90%;
+            margin: 0px auto 0;
+        }
+
+        #tab_nav {
+            height: 25px;
+            line-height: 12px;
+            font-size: 40px;
+        }
+
+        #tab_nav li {
+            float: left;
+            margin: 0 0px;
+            padding-top: 10px;
+            list-style: none;
+            border: 2px solid cornflowerblue;
+            border-bottom: black;
+            height: 100px;
+            width: 250px;
+            text-align: center;
+            vertical-align: center;
+            border-radius: 50px;
+            background: #F5A9BC;
+        }
+
+        a {
+            font: bold 48px "微软雅黑", Verdana, Arial, Helvetica, sans-serif;
+            color: #E0F2F7;
+            text-decoration: coral;
+        }
+
+        a:hover {
+            color: #FACC2E;
+        }
+
+        #tab_content {
+            width: 100%;
+            height: 80vh;
+            border: 1px solid #999;
+            font: bold 4em/50px "微软雅黑", Verdana, Arial,
+            Helvetica, sans-serif;
+            background: #FFF;
+            overflow: hidden;
+        }
+
+        #scrool_div {
+            height: 80%;
+            padding: 10px;
+            clear: both;
+            font-size: medium;
+            overflow-y: scroll;
+        }
+
+        #t_1, #t_2, #t_3 {
+
+            padding: 8px;
+            width: 100%;
+            height: 80vh;
+        }
+
+        h5 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+
+    <div id="tab_content">
+        <div id="t_1">
+            <h5>新房</h5>
+            <div id="scrool_div">
+
+            </div>
+        </div>
+
+        <div id="t_2">
+            <h5>二手房</h5>
+            <div id="scrool_div">
+
+            </div>
+        </div>
+        <div id="t_3">
+            <h5>租房</h5>
+            <div id="scrool_div">
+
+            </div>
+        </div>
+    </div>
+
+    <ul id="tab_nav">
+        <li><a href="#t_1">新房</a></li>
+        <li><a href="#t_2">二手房</a></li>
+        <li><a href="#t_3">租房</a></li>
+    </ul>
+</div>
+</body>
+</html>
