@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>横向滑动</title>
+    <style type="text/css">
+        .slide-box{
+            margin-top: 200px;
+            display: -webkit-box;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling:touch;
+        }
+        /*去掉滚动条*/
+        .slide-box::-webkit-scrollbar{
+            width:0;
+            height:0;
+            display: none;
+        }
+        .slide-item{
+            margin-left: 2vw;
+            margin-right: 2vw;
+            padding: 2vw;
+            width: 95vw;
+            height: 30vh;
+            word-wrap: break-word; /* 换行 */
+            overflow-y: scroll;
+            border:1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-box">
+        <div class="slide-item">1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa1aaaaasaaaaaa</div>
+        <div class="slide-item">2</div>
+        <div class="slide-item">3</div>
+
+    </div>
+</body>
+</html>

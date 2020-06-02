@@ -24,11 +24,24 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e4e1ebf-c938-4435-8316-c3acf649f0af" name="Default Changelist" comment="" />
+    <list default="true" id="8e4e1ebf-c938-4435-8316-c3acf649f0af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/json转表.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/横向滑动.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/横向滑动3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -45,13 +58,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,7 +75,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590072325565</updated>
-      <workItem from="1590072326807" duration="2764000" />
+      <workItem from="1590072326807" duration="4441000" />
+      <workItem from="1590752276992" duration="7868000" />
     </task>
     <servers />
   </component>
@@ -77,8 +93,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="591" y="248" key="Github.ShareDialog" timestamp="1590075523430">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="591" y="248" key="Github.ShareDialog/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590075523430" />
     <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1590074521306">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -95,5 +116,13 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="407" y="257" key="git4idea.merge.GitPullDialog/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590074269119" />
+    <state x="383" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1590766523802">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="383" y="211" width="672" height="678" key="search.everywhere.popup/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590766523802" />
+    <state x="502" y="154" width="450" height="614" key="svn.repositoryBrowser" timestamp="1590075546370">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="502" y="154" width="450" height="614" key="svn.repositoryBrowser/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590075546370" />
   </component>
 </project>
