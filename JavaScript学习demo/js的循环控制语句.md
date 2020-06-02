@@ -35,3 +35,27 @@ document.write \
 
 ## 面向对象
 ![oop](/JavaScript学习demo/属性方法面向对象.png)
+
+
+## 类型
+在 JavaScript 中有 6 种不同的数据类型：
+
+- string
+- number
+- boolean
+- object
+- function
+- symbol
+
+3 种对象类型：
+
+- Object
+- Date
+- Array
+2 个不包含任何值的数据类型：
+
+- null
+- undefined
+
+## 进度
+https://www.runoob.com/js/js-regexp.html

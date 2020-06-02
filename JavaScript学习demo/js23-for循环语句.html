@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h5>普通循环</h5>
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+for (var i=0;i<cars.length;i++){
+	document.write(cars[i] + "<br>");
+}
+</script>
+
+<p>------------</p>
+
+<h5>点击按钮循环代码5次。</h5>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo1"></p>
+<script>
+function myFunction(){
+	var x="";
+	for (var i=0;i<5;i++){
+		x=x + "该数字为 " + i + "<br>";
+	}
+	document.getElementById("demo1").innerHTML=x;
+}
+</script>
+
+<p>------------</p>
+
+<h5>省略写法</h5>
+<script>
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0,len=cars.length;
+for (; i<len; ){
+	document.write(cars[i] + "<br>");
+	i++;
+}
+</script>
+
+<p>------------</p>
+
+<p>点击下面的按钮，只要 i 小于 5 就一直循环代码块。</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo2"></p>
+
+<script>
+function myFunction(){
+	var x="",i=0;
+	do{
+		x=x + "该数字为 " + i + "<br>";
+	    i++;
+	}
+	while (i<5)
+	document.getElementById("demo2").innerHTML=x;
+}
+</script>
+
+</body>
+</html>
