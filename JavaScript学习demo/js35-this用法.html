@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <h2>JavaScript <b>this</b> 关键字</h2>
+
+    <p>实例中，<b>this</b> 指向了 <b>person</b> 对象。</p>
+    <p>因为 person 对象是 fullName 方法的所有者。</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // 创建一个对象
+        var person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // 显示对象的数据
+        document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+
+    <p>-------------------------------------------------</p>
+
+    <p>实例中，<b>this</b> 指向了 window 对象:</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        var x = this;
+        document.getElementById("demo1").innerHTML = x;
+    </script>
+
+    <p>-------------------------------------------------</p>
+    <p>函数中，默认情况下，<b>this</b> 指向全局对象。</p>
+    <p>严格模式下，<b>this</b> 为 <b>undefined</b>，因为严格模式下不允许默认绑定:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        "use strict";
+        document.getElementById("demo2").innerHTML = myFunction2();
+
+        function myFunction2() {
+            return this;
+        }
+    </script>
+
+    <p>------------------------------------------------</p>
+    <button onclick="this.style.display='none'">点我后我就消失了</button>
+
+</body>
+
+</html>
