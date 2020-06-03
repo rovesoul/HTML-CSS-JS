@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>VUE基础</title>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }} id
+    </div>
+    <div class="app">
+        {{message}} class
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            el: ".app",
+            data: {
+                message: "Hello Vue!"
+            }
+        })
+    </script>
+
+    <div>
+
+        <div id="app-3">
+            <p v-if="seen">现在你看到我了</p>
+
+        </div>
+
+        <script>
+            var app3 = new Vue({
+                el: '#app-3',
+                data: {
+                    seen: true
+                }
+            })
+        </script>
+    </div>
+
+    <div>
+        <div id="app2">
+            {{message}}
+            <h2>{{school.name}}: {{school.mobile}}</h2>
+            <ul>
+                <li>{{ campus[0] }}</li>
+                <li>{{ campus[1] }}</li>
+                <li>{{ campus[2] }}</li>
+            </ul>
+        </div>
+
+        <script>
+            var app = new Vue({
+                el: "#app2",
+                data: {
+                    message: "你好，小rovesoul",
+                    school: {
+                        name: "北京大学",
+                        mobile: "400-000-0000"
+                    },
+                    campus: ["beijing", 'shanghai', 'xianggang']
+                }
+            })
+        </script>
+    </div>
+
+
+</body>
+
+</html>
+<!--
+    el： 挂载点
+    data： 数据对象
+ -->
