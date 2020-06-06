@@ -4,8 +4,8 @@
 
 ## Vue指令
 ### 
-v-text
-v-html
+v-text 解析文本
+v-html 解析html
 v-on基础
 v-show
 v-if
