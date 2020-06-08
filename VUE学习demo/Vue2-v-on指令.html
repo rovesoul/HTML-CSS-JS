@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h5>V-text</h5>
+    <h2 v-text="message"></h2>
+    <h2 v-text="info"></h2>
+    <h2>{{message}}</h2>
+    <!--    下边加了'!?' 字符串拼接-->
+    <h2 v-text="message+'!?'"></h2>
+    <h2 v-text="info+'!?'"></h2>
+    <h2>{{message+'!?'}}</h2>
+    <!--    <h2>山东{{ message }}</h2>-->
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: "黑马程序员!!!",
+            info: "lalalalal"
+
+        }
+    })
+</script>
+
+<p>-----------------------------------</p>
+
+<div id="app2">
+    <h5>v-html</h5>
+    <p v-html="content"></p>
+    <p v-text="content"></p>
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app2",
+        data: {
+            content: "<a href='http://www.baidu.com'>百度首页</a>"
+        }
+    })
+</script>
+
+<p>---------------------------------</p>
+<div id="app3">
+    <h5>v-on</h5>
+    <input type="button" value="v-on指令" v-on:click="doit">
+    <input type="button" value="v-on简写" @click="doit">
+    <input type="button" value="v-on双击" @dblclick="doit">
+    <h2 @click="changeFood">{{ food }}</h2>
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app3",
+        data: {
+            food: "西蓝花炒蛋",
+        },
+        methods: {
+            doit: function () {
+                alert("练习vue")
+            },
+            changeFood: function () {
+                console.log(this.food);
+            }
+        },
+    })
+</script>
+
+<p>---------------------------------</p>
+<h5>增加 / 减小</h5>
+<div id="app4">
+    <div class="input_num">
+        <button @click="sub">-</button>
+        <span>{{ num }}</span>
+        <button @click="add">+</button>
+
+    </div>
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app4",
+        data: {
+            num: 1
+        },
+        methods: {
+            add: function () {
+                console.log('add');
+                if (this.num < 10) {
+                    this.num++;
+                } else (
+                    alert("别点了,超了")
+                )
+
+            },
+            sub: function () {
+                console.log('sub');
+                if (this.num > 0) {
+                    this.num--;
+                } else {
+                    alert("别点了,最小了")
+                }
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>

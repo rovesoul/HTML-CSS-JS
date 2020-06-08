@@ -25,9 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e4e1ebf-c938-4435-8316-c3acf649f0af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VUE学习demo/Vue2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VUE学习demo/Vue2-v-on指令.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VUE学习demo/Vue3-v-show-if-bind指令.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VUE学习demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/VUE学习demo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VUE学习demo/Vue2.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +74,35 @@
       <recent name="$PROJECT_DIR$/JavaScript学习demo" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="HTML学习" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VUE学习demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VUE学习demo/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -86,7 +117,7 @@
       <workItem from="1590752276992" duration="9193000" />
       <workItem from="1591109879648" duration="3157000" />
       <workItem from="1591200749790" duration="408000" />
-      <workItem from="1591362142699" duration="4698000" />
+      <workItem from="1591362142699" duration="9084000" />
     </task>
     <task id="LOCAL-00001" summary="uper">
       <created>1590769464342</created>
@@ -123,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591201025137</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="learn keep going on">
+      <created>1591413716690</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591413716690</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,32 +190,50 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1591111188940" />
-    <state x="163" y="-1062" key="CommitChangelistDialog2" timestamp="1591201025023">
-      <screen x="-246" y="-1080" width="1920" height="1080" />
+    <state x="307" y="38" key="CommitChangelistDialog2" timestamp="1591413716406">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="163" y="-1062" key="CommitChangelistDialog2/0.23.1440.877/-246.-1080.1920.1080@-246.-1080.1920.1080" timestamp="1591201025023" />
     <state x="307" y="38" key="CommitChangelistDialog2/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1591200939485" />
+    <state x="307" y="38" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1591413716406" />
     <state x="591" y="248" key="Github.ShareDialog" timestamp="1590075523430">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="591" y="248" key="Github.ShareDialog/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590075523430" />
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1591538280771">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877/80.-720.1280.720@0.23.1440.877" timestamp="1591538280771" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1591538280769">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877/80.-720.1280.720@0.23.1440.877" timestamp="1591538280769" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1591538280768">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877/80.-720.1280.720@0.23.1440.877" timestamp="1591538280768" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1591538280770">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877/80.-720.1280.720@0.23.1440.877" timestamp="1591538280770" />
     <state x="516" y="172" key="RollbackChangesDialog" timestamp="1591200889156">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="516" y="172" key="RollbackChangesDialog/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1591200889156" />
-    <state x="181" y="-861" key="Vcs.Push.Dialog.v2" timestamp="1591201057195">
-      <screen x="-246" y="-1080" width="1920" height="1080" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1591413721452">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="181" y="-861" key="Vcs.Push.Dialog.v2/0.23.1440.877/-246.-1080.1920.1080@-246.-1080.1920.1080" timestamp="1591201057195" />
     <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1591113146111" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1591413721452" />
     <state x="512" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590074473525">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="512" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590074473525" />
-    <state x="420" y="97" width="600" height="729" key="find.popup" timestamp="1591363059855">
+    <state x="420" y="97" width="600" height="729" key="find.popup" timestamp="1591419167210">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="420" y="97" width="600" height="729" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1591363059855" />
+    <state x="420" y="97" width="600" height="729" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1591419167210" />
     <state x="498" y="257" key="git4idea.merge.GitMergeDialog" timestamp="1590074507542">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -186,13 +242,17 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="407" y="257" key="git4idea.merge.GitPullDialog/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590074269119" />
-    <state x="383" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1590766523802">
+    <state x="383" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1591630373612">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="383" y="211" width="672" height="678" key="search.everywhere.popup/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590766523802" />
+    <state x="383" y="211" width="672" height="678" key="search.everywhere.popup/1923.-468.1280.720/0.23.1440.877/-637.-1440.2560.1440@0.23.1440.877" timestamp="1591630373612" />
     <state x="502" y="154" width="450" height="614" key="svn.repositoryBrowser" timestamp="1590075546370">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="502" y="154" width="450" height="614" key="svn.repositoryBrowser/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1590075546370" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HTML$test.coverage" NAME="test Coverage Results" MODIFIED="1591538280750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VUE学习demo" />
   </component>
 </project>
