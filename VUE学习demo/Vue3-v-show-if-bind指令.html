@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>v-show if blind</title>
+    <style>
+        .active{border:1px solid red}
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 
+    <div id="app1">
+        <h5>v-show 切换的是display方式，频繁切换用这个</h5>
+        
+        <input type="button" value="切换显示状态" @click="changeIsShow">
+        <img v-show="true" src="../imgs/公众号二维码.jpg" alt=" ">
+        <img v-show="isShow" src="../imgs/公众号二维码.jpg" alt=" ">
+        <p   v-show="isShow">段落尝试</p>
+        <br>
+        <input type="button" value="增加年龄" @click="addAge">
+        <input type="button" value="减少年龄" @click="minusAge">
+        <img v-show="age>=18" src="../imgs/公众号二维码.jpg" alt=" ">
+        <p v-show="age>=19">段落尝试</p>
+    </div>
+
+    
+    <script>
+        var app = new Vue({
+            el:"#app1",
+            data:{
+                isShow:false,
+                age:16
+            },
+            methods:{
+                changeIsShow:function(){
+                    this.isShow = !this.isShow ;
+                },
+                addAge:function(){
+                    this.age++;
+                },
+                minusAge:function(){
+                this.age--;
+                }
+
+            }
+        })
+    </script>
+
+
+<p>-------------------------------------------------------------------------</p>
+
+
+<h5>v-if 切换的是dom数，数量少的用这个</h5>
+    <div id="app2">
+        <input type="button" value="切换显示" @click="toggleIsShow">
+        <p v-if="isShow"> 学习VUE </p>
+        <p v-if="isShow"> 学习VUE-v_show修饰 </p>
+        <h5 v-if="temperature>=40">热死了</h5>
+
+    </div>
+
+    <script>
+        var app=new Vue({
+            el:"#app2",
+            data:{
+                isShow:false,
+                temperature:40
+            }, 
+            methods:{
+                toggleIsShow:function(){
+                    this.isShow = !this.isShow;
+                }
+            }
+        })
+    </script>
+
+    <p>---------------------------------------------------------</p>
+    <div id="app3">
+        <h5>v-blind属性</h5>
+        <p>语法 v-bind:属性名=表达式</p>
+        <img v-bind:src="imgSrc" alt=" ">
+        <br>
+        <img :src="imgSrc" :title="imgTitle" alt=" " 
+        v-bind:class="isActive?'active':''" @click="toggleIsActive"> 
+        <br>
+        <img :src="imgSrc" :title="imgTitle" alt=" " v-bind:class="{active:isActive}" @click="toggleIsActive">
+    </div>
+
+
+    <script>
+        var app =new Vue({
+            el: "#app3",
+            data:{
+                imgSrc:"../imgs/公众号二维码.jpg" ,
+                imgTitle:"好好学习" ,
+                isActive:false
+            },
+            methods:{
+                toggleIsActive:function(){
+                    this.isActive = ! this.isActive;
+                }
+            },
+
+        })
+    </script>
 </body>
 </html>
