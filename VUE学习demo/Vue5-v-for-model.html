@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>v-show if blind</title>
+    <style>
+        .active {
+            border: 1px solid red
+        }
+
+        .mask {
+            float: left;
+            width: 200px;
+            height: fit-content;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h2>v-for学习</h2>
+    <div id="app1">
+        <input type="button" @click="add" value="Add">
+        <input type="button" @click="remove" value="Miinus">
+        <ul>
+            <li v-for="(item,index) in arr">
+                {{ index }}比较大的城市: {{ item }}
+            </li>
+        </ul>
+        <h2 v-for="item in vegetables" v-bind="item.name">
+            {{ item.name }}
+        </h2>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el:"#app1",
+            data:{
+                arr:['北京','天津','上海','南昌','湖北'],
+                vegetables:[
+                    {name:'西蓝花'},
+                    {name:'酸葡萄'}
+                ]
+            },
+            methods:{
+                add:function(){
+                    this.vegetables.push({name:"水晶脂肪"});
+                },
+                remove:function(){
+                    this.vegetables.shift(-1);
+                }
+            }
+        })
+    </script>
+<p>-------------------------------------------------------</p>
+<h2>function的参数传递</h2>
+<div id="app2">
+
+    <input type="button" @click="doit(666,'被点到了')" value="点我,查看console">
+    <br>
+    <input type="text" @keyup.enter="sayHi">
+</div>
+
+
+
+<script>
+    var app = new Vue({
+        el:"#app2",
+        methods:{
+            doit:function(k1,k2){
+                console.log("点了按钮");
+                console.log(k1);
+                console.log(k2);
+            },
+            sayHi:function(){
+                alert("吃了吗?");
+            }
+        }
+    })
+</script>
+
+<br>
+<p>-------------------------------------------------------</p>
+<h2>v-model学习</h2>
+<div id="app3">
+    <input type="button" value="修改message" @click="setM">
+    <br>
+    <input type="text" v-model="message" @keyup.enter="getM">
+    <h2>
+        {{message}}
+    </h2>
+</div>
+ 
+<script>
+    var app = new Vue({
+        el:"#app3",
+        data:{
+            message:"同步修改的vmodel"
+        },
+        methods:{
+            getM:function(){
+                alert(this.message)
+            },
+            setM:function(){
+                this.message = "这是点击设定的";
+            }
+            
+        }
+    })
+</script>
+
+<p>---------------------</p>
+</body>

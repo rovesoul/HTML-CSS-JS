@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>v-show if blind</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+     <!-- 生成列表 v-for -->
+     <!-- 获取输入 v-model -->
+     <!-- 回车,新增数据 v-on.enter添加数据 -->
+
+     <!-- 主体区域 -->
+<section id="todoapp">
+    <header class='header'>
+        <h1>MINUS任务记事本</h1>
+        <!-- 输入区域 -->
+        <input v-model="inputvalue" @keyup.enter="addlist" type="text" autofocus="autofocus" autocomplete="off" placeholder="请输入任务" class='new-todo'>
+    </header>
+
+    <!-- 列表区域 -->
+    <section class='main'>
+        <ul class="todo-list">
+            <li class='todo' v-for="(item,index) in list">
+                <div class='view'>
+                    <span class='index'>{{index +1 }}</span>
+                    <label for="">{{item}}</label>
+                    <button  class='destroy' @click="remove(index,item)" ></button>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+    <!-- 统计和清空 -->
+    <footer class="footer">
+        <span class='todo-count' v-if="list.length != 0">
+            <strong>{{list.length}}</strong> items
+        </span>
+        <!-- 清空 -->
+        <button v-show="list.length!=0" class="clear-completed" @click="cleanAll">
+            清空
+        </button>
+        
+        
+    </footer>
+
+</section>
+
+<!-- 底部 -->
+<footer class='info'>
+
+</footer>
+
+<script>
+    var app = new Vue({
+        el:"#todoapp",
+        data:{
+            list:['学编程','三顿饭','睡午觉'],
+            inputvalue:"喝8杯水",
+        },
+        methods:{
+            addlist:function(){
+                this.list.push(this.inputvalue) ; 
+                this.inputvalue='';
+            },
+            remove:function(index,item){
+                console.log("删除位置:",index,item);
+                this.list.splice(index,1);
+            },
+            cleanAll:function(){
+                console.log("删除所有",this.list);
+                this.list = [];
+            }
+        }
+    })
+</script>
+
+</body>
