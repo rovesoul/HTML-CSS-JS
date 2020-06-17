@@ -25,9 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e4e1ebf-c938-4435-8316-c3acf649f0af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VUE学习demo/Vue-and-axios.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VUE学习demo/axios简单用法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VUE学习demo/images/Vue-天知道哦.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +69,7 @@
       <recent name="$PROJECT_DIR$/VUE学习demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/VUE学习demo" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/JavaScript学习demo" />
     </key>
@@ -123,7 +121,7 @@
       <workItem from="1591774232966" duration="103000" />
       <workItem from="1591976436885" duration="86000" />
       <workItem from="1592147792276" duration="223000" />
-      <workItem from="1592227743413" duration="5149000" />
+      <workItem from="1592227743413" duration="5273000" />
     </task>
     <task id="LOCAL-00001" summary="uper">
       <created>1590769464342</created>
@@ -195,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592147955972</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="learn keep going on">
+      <created>1592236250358</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592236250358</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,12 +229,12 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1591111188940" />
-    <state x="307" y="38" key="CommitChangelistDialog2" timestamp="1592147955710">
+    <state x="307" y="38" key="CommitChangelistDialog2" timestamp="1592236250138">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="163" y="-1062" key="CommitChangelistDialog2/0.23.1440.877/-246.-1080.1920.1080@-246.-1080.1920.1080" timestamp="1591201025023" />
     <state x="307" y="38" key="CommitChangelistDialog2/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1591200939485" />
-    <state x="307" y="38" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1592147955710" />
+    <state x="307" y="38" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1592236250138" />
     <state x="307" y="38" key="CommitChangelistDialog2/1923.-468.1280.720/0.23.1440.877/-637.-1440.2560.1440@0.23.1440.877" timestamp="1591631112463" />
     <state x="591" y="248" key="Github.ShareDialog" timestamp="1590075523430">
       <screen x="0" y="23" width="1440" height="877" />
@@ -263,12 +268,12 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1592230745460" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1592147969149">
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2" timestamp="1592236255456">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="181" y="-861" key="Vcs.Push.Dialog.v2/0.23.1440.877/-246.-1080.1920.1080@-246.-1080.1920.1080" timestamp="1591201057195" />
     <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877/-246.-1080.1920.1080@0.23.1440.877" timestamp="1591113146111" />
-    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1592147969149" />
+    <state x="320" y="201" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1592236255456" />
     <state x="320" y="201" key="Vcs.Push.Dialog.v2/1923.-468.1280.720/0.23.1440.877/-637.-1440.2560.1440@0.23.1440.877" timestamp="1591631122486" />
     <state x="512" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590074473525">
       <screen x="0" y="23" width="1440" height="877" />

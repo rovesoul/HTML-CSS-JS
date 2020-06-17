@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>天知道</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/tianzhid_index.css" />
+  </head>
+
+  <body>
+    <div class="wrap" id="app">
+      <div class="search_form"> 
+        <div class="logo"><img src="images/logo.png" alt="logo" /></div>
+        <div class="form_group">
+          <input
+            type="text"
+            @keyup.enter="searchWeather"
+            v-model="city"
+            class="input_txt"
+            placeholder="请输入查询的天气"
+          />
+          <button class="input_sub" @click="searchWeather">
+            搜 索
+          </button>
+        </div>
+        <div class="hotkey">
+          <a href="javascript:;" @click="changeCity('北京')">北京</a>
+          <a href="javascript:;" @click="changeCity('上海')">上海</a>
+          <a href="javascript:;" @click="changeCity('广州')">广州</a>
+          <a href="javascript:;" @click="changeCity('深圳')">深圳</a>
+          <a href="javascript:;" @click="changeCity('成都 ')">成都</a>
+          <a href="javascript:;" @click="changeCity('胶州')">胶州</a>
+        </div>
+      </div>
+      
+      <ul class="weather_list">
+        
+        <li v-for="item in weatherList">
+          <div class="info_type"><span class="iconfont">{{item.type}}</span></div>
+          <div class="info_temp">
+            <b>{{ item.fengxiang}}</b>
+            <br>
+            <b>{{item.low}}</b>
+            ~
+            <b>{{item.high}}</b>
+            <br>
+            
+          </div>
+          <div class="info_date"><span>{{item.date}}</span></div>
+        </li>
+      </ul>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 官网提供的 axios 在线地址 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 自己的js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
