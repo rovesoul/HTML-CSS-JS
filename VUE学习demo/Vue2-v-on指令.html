@@ -33,16 +33,20 @@
 <p>-----------------------------------</p>
 
 <div id="app2">
-    <h5>v-html</h5>
+    <h5>v-html部分</h5>
     <p v-html="content"></p>
+    <p v-html="bbs"></p>
+    <p>v-text ↓↓↓</p>
     <p v-text="content"></p>
+    
 </div>
 
 <script>
     var app = new Vue({
         el: "#app2",
         data: {
-            content: "<a href='http://www.baidu.com'>百度首页</a>"
+            content: "<a href='http://www.baidu.com'>百度首页</a>",
+            bbs:"<a href='http://www.sumerminus.com'>sumerminus</a>",
         }
     })
 </script>

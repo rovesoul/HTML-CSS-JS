@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>v-show if blind</title>
     <style>
-        .active{border:1px solid red}
+        .active{border:1px solid red ;color:red;}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
@@ -78,15 +78,20 @@
 
     <p>---------------------------------------------------------</p>
     <div id="app3">
-        <h5>v-blind属性</h5>
+        <h5>v-blind属性,v-bind:后边可以接字典形式</h5>
         <p>语法 v-bind:属性名=表达式</p>
         <img v-bind:src="imgSrc" alt=" ">
         <br>
+        <!-- 语法糖写法 : -->
         <img :src="imgSrc" :title="imgTitle" alt=" " 
         v-bind:class="isActive?'active':''" @click="toggleIsActive"> 
         <br>
         <img :src="imgSrc" :title="imgTitle" alt=" " v-bind:class="{active:isActive}" @click="toggleIsActive">
+        <h5 :class="{active : isActive}">V-bind取反,动态绑定</h5>
+        <input type="button" @click="toggleIsActive" value="点我变色">
     </div>
+    
+
 
 
     <script>
