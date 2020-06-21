@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>v-show if blind</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        #bz{font-size: small;color: rgb(100, 100, 100);}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h5 v-once>{{ message }}</h5>  
+        <p id="bz">v-once 使大括号内容不改变,只渲染一次only rander once ; v-once后不需要接指令 </p>
+        <h5>{{ message }}</h5>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "hello",
+            },
+        })
+    </script>
+
+</body>

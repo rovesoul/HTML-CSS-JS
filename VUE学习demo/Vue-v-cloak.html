@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app" v-cloak>
+        <h5>{{ message }}</h5>
+        <p id="bz"> v-cloak指令 原封不动显示 ↓</p>
+        <h5 v-cloak>{{ message }}</h5>
+    </div>
+
+    <script>
+        //在Vue解析前,div中有一个v-cloak属性
+        //在vue解析后,div中没有一个属性v-cloak
+        setTimeout(function(){
+            const app = new Vue({
+            el: "#app",
+            data: {
+            message: "hello",
+            },
+            })
+        },1000)
+        
+    </script>
+</body>
+
+</html>
