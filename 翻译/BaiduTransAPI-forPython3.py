@@ -16,7 +16,7 @@ myurl = '/api/trans/vip/translate'
 fromLang = 'auto'   #原文语种
 toLang = 'auto'   #译文语种 见链接https://api.fanyi.baidu.com/doc/21
 salt = random.randint(32768, 65536)
-q= input('your word')
+q= input('your word:')
 sign = appid + q + str(salt) + secretKey
 sign = hashlib.md5(sign.encode()).hexdigest()
 myurl = myurl + '?appid=' + appid + '&q=' + urllib.parse.quote(q) + '&from=' + fromLang + '&to=' + toLang + '&salt=' + str(
@@ -31,7 +31,9 @@ try:
     result_all = response.read().decode("utf-8")
     result = json.loads(result_all)
 
-    print (result)
+
+    print (f"输入:{result['trans_result'][0]['src']}")
+    print (f"输出:{result['trans_result'][0]['dst']}")
 
 except Exception as e:
     print (e)
