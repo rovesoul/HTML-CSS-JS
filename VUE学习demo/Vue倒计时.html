@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        input {
+            font-size: 16px;
+            padding: 4px;
+            -webkit-tap-highlight-color: transparent;
+            outline-style: none;
+            list-style: none;
+        }
+
+        .get_num {
+            width: 78px;
+            height: 30px;
+            font-size: 13px;
+            color: white;
+            display: block;
+            background: #3bc987;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 8px;
+        }
+        
+
+        .get_num.gray {
+            background: #c8c8c8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="input-group">
+            <input type="number" class="form-control" v-model="minute" placeholder="输入倒计时(分)" @keyup.enter="countdown"
+                aria-describedby=" basic-addon2">
+            <span class="input-group-addon" id="basic-addon2">min</span>
+        </div>
+        
+        <div :class="isActive" v-show="isShow" role="alert">
+            <h1>{{ second }}</h1>
+            <p>秒后结束</p>
+        </div>
+
+        <h2 class="get_num " v-bind:class="{gray:second>0}" @click='countdown'>{{ getChangeText() }}</h2>
+        <h2 class="get_num " v-bind:class="{gray:second>0}" @click='diplay'>{{ getChangeText() }}</h2>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#container',
+
+            data: {
+                minute: '',
+                second: '',
+                message: '',
+                timer_interval: '', //倒计时变量存储
+                isActive:"alert alert-success",
+                isShow:false,
+            },
+
+            created: function () {
+
+            },
+
+            methods: {
+                countdown: function () {
+                    clearInterval(this.timer_interval); //清除上次操作
+                    var that = this;
+                    this.isShow = true;
+                    this.second = this.minute * 60;
+                    console.log(this.second)
+                    that.timer_interval = setInterval(function () {
+                        if (that.second > 0) {
+                            that.second--;
+                        } else if (that.second <= 0) {
+                            that.second = ''
+                            that.isActive ="alert alert-danger";
+                            that.isShow = false;
+                        } else {
+                            clearInterval(timer_interval);
+                        }
+                    }, 1000);
+                    //在这里调取你获取验证码的ajax
+                },
+
+                getChangeText: function () {
+                    if (this.second > 0) {
+                        return this.second + 's后结束';
+                    }
+
+                    if (this.second === 0) {
+                        return '计时结束';
+                    }
+
+                    if (this.second === "") {
+                        return '点击开始';
+                    }
+
+                },
+                diplay: function () { //这里是一个含参函数
+                    //console.log(id);
+                    var that = this;
+                    console.log("假装播放")
+                },
+            }
+        })
+    </script>
+
+
+</body>
