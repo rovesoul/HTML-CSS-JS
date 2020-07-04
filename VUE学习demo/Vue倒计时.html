@@ -9,6 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <style>
+        [v-cloak] {
+            display: none;
+        }
+
         input {
             font-size: 16px;
             padding: 4px;
@@ -39,7 +43,7 @@
 
 <body>
     <br>
-    <div class="container" id="container">
+    <div class="container" id="container" v-cloak>
         <!-- 倒计时输入 -->
         <div class="input-group">
             <input type="number" class="form-control" v-model="minute" placeholder="输入倒计时(分)" @keyup.enter="countdown"
@@ -53,14 +57,14 @@
         </div>
         <!-- 倒计时生命条 -->
         <div class="progress">
-            <div v-show="isShow" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-                aria-valuemin="0" aria-valuemax="100" :style="{width:widths +'%'}">
-                <span v-show="isShow" class="sr-only">40% Complete (success)</span>
-            </div> 
+            <div v-show="isShow" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" :style="{width:widths +'%'}">
+                <span v-show="isShow" class="sr-only">{{widths}}% Complete (success)</span>
+            </div>
         </div>
 
-        <h2 class="get_num " v-bind:class="{gray:second>0}" @click='countdown'>{{ getChangeText() }}</h2>
-        <h2 class="get_num " v-bind:class="{gray:second>0}" @click='diplay'>{{ getChangeText() }}</h2>
+        <!-- <h2 class="get_num " v-bind:class="{gray:second>0}" @click='countdown'>{{ getChangeText() }}</h2> -->
+        <!-- <h2 class="get_num " v-bind:class="{gray:second>0}" @click='diplay'>{{ getChangeText() }}</h2> -->
     </div>
 
     <script>
@@ -86,7 +90,8 @@
                     clearInterval(this.timer_interval); //清除上次操作
                     var that = this;
                     this.isShow = !this.isShow;
-                    that.widths=100;
+                    that.isActive = "alert alert-success";
+                    that.widths = 100;
                     this.second = this.minute * 60;
                     this.seconds = this.minute * 60;
                     console.log(this.second)
@@ -94,23 +99,27 @@
                         if (that.second > 0) {
                             if (that.second > 60) {
                                 that.isActive = "alert alert-success";
-                            } else if (that.second > 30) {
+                            } else if (that.second >= 30) {
                                 that.isActive = "alert alert-warning";
-                            } else if (that.second > 10) {
+                            } else if (that.second < 30) {
                                 that.isActive = "alert alert-danger";
                             }
                             that.second--;
                             that.widths = (that.second / that.seconds) * 100;
                         } else if (that.second <= 0) {
-                            that.second = ''
+                            that.second =" ";
                             that.isShow = false;
-                            that.widths=100;
-                            clearInterval(timer_interval);
+                            that.widths = 100;
+                            that.minute ='';
+                            
+                            
+                            clearInterval(that.timer_interval);
                         } else {
-                            clearInterval(timer_interval);
+                            clearInterval(that.timer_interval);
                         }
                     }, 1000);
                     //在这里调取你获取验证码的ajax
+                    // that.minute ='';
                 },
 
                 getChangeText: function () {
